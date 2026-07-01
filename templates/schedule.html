@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Schedule</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Weekly / Monthly Meal Schedule</h2>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Meal</th>
+            <th>Recipe</th>
+            <th>Action</th>
+        </tr>
+
+        {% for item in schedules %}
+        <tr>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>
+                <a href="/delete_schedule/{{ item[0] }}" class="delete">Delete</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">No schedule added yet.</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/" class="back">Back to Dashboard</a>
+</div>
+
+</body>
+</html>

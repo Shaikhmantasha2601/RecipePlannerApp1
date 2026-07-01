@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Schedule</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Add Meal Schedule</h2>
+
+    <form method="POST">
+        <label>Select Recipe</label>
+        <select name="recipe_id" required>
+            {% for recipe in recipes %}
+            <option value="{{ recipe[0] }}">{{ recipe[1] }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Date</label>
+        <input type="date" name="schedule_date" required>
+
+        <label>Meal Type</label>
+        <select name="meal_type" required>
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+            <option>Snack</option>
+        </select>
+
+        <button type="submit">Save Schedule</button>
+    </form>
+
+    <a href="/" class="back">Back to Dashboard</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saved Recipes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>My Recipe Collection</h2>
+
+    <div class="recipe-grid">
+        {% for recipe in recipes %}
+        <div class="recipe-box">
+            <h3>{{ recipe[1] }}</h3>
+
+            <a href="/recipe/{{ recipe[0] }}" class="view-btn">View Recipe</a>
+            <a href="/delete_recipe/{{ recipe[0] }}" class="delete-btn">Delete</a>
+        </div>
+        {% else %}
+        <p class="empty">No recipes added yet.</p>
+        {% endfor %}
+    </div>
+
+    <a href="/" class="back">Back to Dashboard</a>
+</div>
+
+</body>
+</html>

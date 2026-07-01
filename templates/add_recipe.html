@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Add New Recipe</h2>
+
+    <form method="POST">
+        <label>Recipe Name</label>
+        <input type="text" name="name" placeholder="Example: Paneer Butter Masala" required>
+
+        <label>Ingredients</label>
+        <textarea name="ingredients" rows="8" required
+placeholder="Paneer
+Tomatoes
+Onions
+Butter
+Cream
+Salt"></textarea>
+
+        <label>Method / Steps</label>
+        <textarea name="method" rows="10" required
+placeholder="Heat butter in a pan
+Add onions and tomatoes
+Add spices and cook well
+Add paneer and cream
+Cook for 5 minutes and serve"></textarea>
+
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <a href="/" class="back">Back to Dashboard</a>
+</div>
+
+</body>
+</html>

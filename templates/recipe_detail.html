@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ recipe[1] }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="recipe-detail-card">
+    <h1>{{ recipe[1] }}</h1>
+
+    <h2>Ingredients</h2>
+    <ul class="ingredients-list">
+        {% for item in ingredients %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Method</h2>
+    <ol class="method-list">
+        {% for step in method %}
+        <li>{{ step }}</li>
+        {% endfor %}
+    </ol>
+
+    <a href="/recipes" class="back">Back to Recipes</a>
+</div>
+
+</body>
+</html>
